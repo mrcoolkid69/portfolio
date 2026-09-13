@@ -8,13 +8,14 @@
     <title>Portfolio | Websites</title>
     <link rel="stylesheet" href="defaults.css" />
     <script src="styles.js" defer></script>
+    <script src="sites.js" defer></script>
 
     <style>
         .website-card {
             display: block;
             width: 50%;
             height: fit-content;
-            margin: auto;
+            margin: 50px auto; 
             background-color: #f9f9f9;
             border: 1px solid black;
             border-radius: 8px;
@@ -28,6 +29,18 @@
             box-shadow: 0 0 10px #1e4de9; 
             border-radius: 8px;
         }
+        .website-card h6 {
+            margin: 0;
+            font-size: 0.7em;
+            line-height: 0.5px;
+            color:rgb(94, 94, 94);
+        }
+        
+        @media (max-width: 768px) {
+            .website-card {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 
@@ -39,18 +52,87 @@
     </nav>
     <main>
         <header>My Websites</header>
+
+        <!-- Website Cards -->
+         <!--
         <div class="website-card">
+            <div>
+                <iframe src="site link" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Site name</h2>
+            <p>Role in site</p>
+            <a href="Site link" target="_blank">Visit Site</a>
+            <h6>site link</h6>
+        </div>
+         -->
+        <div class="website-card" id ="website-card-1">
             <div>
                 <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
             </div>
             <h2>Ethan Is Cool</h2>
             <p>Developer and Designer</p>
             <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
         </div>
+<!-- 
+        <div class="website-card" id="website-card-2">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div>
+        <div class="website-card" id="website-card-3">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div> -->
 
         <header>Co Created Websites</header>
+        <!-- <div class="website-card" id="website-card-4">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div>
+        <div class="website-card" id="website-card-5">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div> -->
 
         <header>Websites I Contributed To</header>
+        <!-- <div class="website-card" id="website-card-6">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div>
+        <div class="website-card" id="website-card-7">
+            <div>
+                <iframe src="https://ethaniscool.w3spaces.com/home.html" width="100%" height="100%" frameborder="0"></iframe>
+            </div>
+            <h2>Ethan Is Cool</h2>
+            <p>Developer and Designer</p>
+            <a href="https://ethaniscool.w3spaces.com" target="_blank">Visit Site</a>
+            <h6>https://ethaniscool.w3spaces.com</h6>
+        </div> -->
 
 
     </main>
