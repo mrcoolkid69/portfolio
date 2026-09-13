@@ -11,10 +11,6 @@ function loadfooter() {
     <p>Projects</p>
     </th>
 
-    <th>
-    <p>Contact</p>
-    </th>
-
     </tr>
     <tr>
     <td>
@@ -34,9 +30,6 @@ function loadfooter() {
         <p>Ethan Is Cool</p>
     </a>
 
-  <td>
-    
-  </td>
     </tr>
     </table>`;
 }
