@@ -5,11 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="logo.png">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Portfolio | Home</title> 
     <link rel="stylesheet" href="defaults.css" />
     <script src="styles.js" defer></script>
  
-    <style></style>
+    <style>
+        .about-me{
+            max-width: 900px;
+            font-size: 25px;
+            margin: 0 auto;
+            padding: 25px; 
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: #54c0ff;
+            background-image: linear-gradient(to bottom right, #54c0ff, #2f7ef3);
+            transition: 0.3s;
+        }
+        .about-me:hover {
+            box-shadow: 0px 4px 8px #000000ce;
+        }
+        
+
+    </style>
 </head>
  
 <body>
@@ -21,7 +39,14 @@
     </nav>
     <main>
         <header>Ethan Figueroa's Portfolio</header>
-
+        <div class="about-me">
+            <p>Welcome to my portfolio. Here you can find information about me, my projects, and how to get in touch.</p>
+            <p>I code front end websites using HTML, CSS, and JavaScript. I also have a basic understading of Python and React, along with C++.</p>
+            <p>I started coding in 2025 and have been practicing since then. I have created many sites to showcase my skills.</p>
+        </div>
+        <a class = "btn-link" href="sites.html">View my websites</a>
+        <a class = "btn-link" href="contact.html">Contact me</a>
+        <a class="btn-link" href="https://github.com/mrcoolkid69" target="_blank"> <i class="fa fa-github" style="font-size:36px"></i> My GitHub</a>
     </main>
     <footer></footer>
 </body>
