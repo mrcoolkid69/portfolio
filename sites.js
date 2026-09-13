@@ -10,22 +10,25 @@ const pageHeight = Math.max(
     html.scrollHeight,
     html.offsetHeight
 );
-const cardSpace = cardHeight * cards;
-const cardsPxs = Math.floor((cardSpace) / cards);
-console.log("Page Height: " + pageHeight + "px" + " | Cards: " + cards + " | Cards Pxs: " + cardsPxs + "px");
+const cardSpace = cardHeight * cards; 
+const cardSpaceGap = (pageHeight - cardSpace)/5;
+console.log("Page Height: " + pageHeight + "px" + " | Cards: " + cards + " | Cards Pxs: " + cardHeight + "px");
 
 function targetCardPxs(scroll) {
-    let activeCard = 1;
+    let activeCard;
     for (let i = 1; i <= cards; i++) {
-        if (scroll >= cardsPxs) {
-            console.log(scroll);
+        if ( scroll >= (cardHeight*i)-screenHeight ) {
+            // console.log(scroll);
             activeCard = i;
+            
         }
+        
+        
     }
     console.log(activeCard);
+     
 }
 
 window.addEventListener('scroll', () => {
     targetCardPxs(window.scrollY);
 });
- 
