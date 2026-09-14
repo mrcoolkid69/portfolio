@@ -16,9 +16,21 @@ console.log("Page Height: " + pageHeight + "px" + " | Cards: " + cards + " | Car
 function targetCardPxs(scroll) {
     let activeCard;
     for (let i = 1; i <= cards; i++) {
-        if (scroll >= (cardHeight * i) - screenHeight) {
-            // console.log(scroll);
-            activeCard = i;
+        if (i <= 6) {
+            if (scroll >= ((cardHeight * i) - screenHeight)) {
+                // console.log(scroll);
+                activeCard = i;
+            }
+        }else if(i > 6){
+            if (scroll >= ((cardHeight * i) - screenHeight)-300) {
+                // console.log(scroll);
+                activeCard = i;
+            }
+        }else{
+            if (scroll >= ((cardHeight * i) - screenHeight)-800) {
+                // console.log(scroll);
+                activeCard = i;
+            }
         }
     }
     console.log(activeCard);
@@ -35,7 +47,7 @@ function changeOpacity(cardNum) {
         document.getElementsByClassName("website-card")[previousCard].style.opacity = 0.1;
         document.getElementsByClassName("website-card")[previousCard].style.transform = "scale(0.75)";
     }
-    if (nextCard <= cards-1) {
+    if (nextCard <= cards - 1) {
         document.getElementsByClassName("website-card")[nextCard].style.opacity = 0.1;
         document.getElementsByClassName("website-card")[nextCard].style.transform = "scale(0.75)";
     }
