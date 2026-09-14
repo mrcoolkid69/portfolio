@@ -63,6 +63,7 @@ main {
 /* Navigation Bar */
 nav {
   background-color: #1575bf;
+  background-image: linear-gradient(to bottom right, #1575bf, #0046c7);
   overflow: hidden;
   display: flex;
   width: 100%;
@@ -81,6 +82,7 @@ nav a {
   text-decoration: none;
   font-size: 20px;
   background-color: #5498ff;
+  background-image: radial-gradient(circle, #1670f8, #0e4bf1);
   transition: 0.3s;
   border-radius: 14px;
   margin-right: 5px;
@@ -104,14 +106,16 @@ footer {
   bottom: 0;
   position: relative;
   color: white;
-  background-color: rgb(37, 90, 165);
+  background-color: #255aa5;
+  background-image: linear-gradient(to bottom , #255aa5, #0f36e7);
   height: fit-content;
   text-align: center;
   padding: 50px 0px;
   margin: 0px;
   margin-top: 60vh;
-  outline: dashed rgb(13, 74, 255) 2px;
-}
+  outline: double #0d4aff 3px; 
+  box-shadow: 0px -5px 5px #0d4aff;
+} 
 
 footer table {
   margin: auto;
