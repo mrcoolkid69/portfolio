@@ -88,6 +88,8 @@ nav .navContainer .cover {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+  color: black;
   width: 60px;
   height: 40px;
   position: absolute;
@@ -108,6 +110,7 @@ nav .navContainer:hover .cover:not(.active) {
 
 nav .navContainer#active .cover {
  background-color: #0067b6;
+ color:white;
  background-image: linear-gradient(to bottom right, #0067b6, #0046c7);
  
 } 
