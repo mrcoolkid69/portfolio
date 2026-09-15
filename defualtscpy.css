@@ -75,66 +75,29 @@ nav {
   top: 0;
 }
 
-nav .navContainer {
-  display: inline-block;
-  width: 60px;
-  height: 40px;
-  border-radius: 10px;
-  position: relative;
-}
-
-nav .navContainer .cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 60px;
-  height: 40px;
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  transform-origin: top center;
-  transition: 0.4s;
-  background-color: rgb(0, 110, 255);
-  border-radius: 10px;
+nav a {
+  color: black;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: #5498ff;
+  background-image: radial-gradient(circle, #1670f8, #0e4bf1);
+  transition: 0.3s;
+  border-radius: 14px;
+  margin-right: 5px;
   font-family: 'Times New Roman', Times, serif;
 }
 
-nav .navContainer:hover .cover:not(.active) {
-  transform: rotateX(75deg);
-  box-shadow: 0px 10px 4px black;
+nav a:not(.active):hover {
+  color: black;
+  filter: drop-shadow(-5px 8px 10px black);
+  box-shadow: 0px 0px 10px #0e12f1;
 }
 
-nav .navContainer .cover.active {
+nav a.active {
   background-color: #145b91;
-
-}
-
-nav .navContainer .button {
-  z-index: 100;
-  position: absolute;
-  top: 13px;
-  left: 20px;
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: 1px solid #ae0000;
-  outline-offset: 1px;
-  border-radius: 50%;
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  color: red;
-  transition: 0.3s;
-}
-
-nav .navContainer:hover .button {
-  box-shadow: 0px 3px 4px black;
-}
-
-nav .navContainer:hover .button:active {
-  box-shadow: 0px 0px 0px black;
+  color: white;
 }
 
 /* Footer */
@@ -144,15 +107,15 @@ footer {
   position: relative;
   color: white;
   background-color: #255aa5;
-  background-image: linear-gradient(to bottom, #255aa5, #0f36e7);
+  background-image: linear-gradient(to bottom , #255aa5, #0f36e7);
   height: fit-content;
   text-align: center;
   padding: 50px 0px;
   margin: 0px;
   margin-top: 60vh;
-  outline: double #0d4aff 3px;
+  outline: double #0d4aff 3px; 
   box-shadow: 0px -5px 5px #0d4aff;
-}
+} 
 
 footer table {
   margin: auto;
@@ -211,3 +174,4 @@ footer td p:active {
     width: 100%;
   }
 }
+
