@@ -109,11 +109,11 @@ nav .navContainer:hover .cover:not(.active) {
 }
 
 nav .navContainer#active .cover {
- background-color: #0067b6;
- color:white;
- background-image: linear-gradient(to bottom right, #0067b6, #0046c7);
- 
-} 
+  background-color: #0067b6;
+  color: white;
+  background-image: linear-gradient(to bottom right, #0067b6, #0046c7);
+
+}
 
 nav .navContainer .button {
   z-index: 100;
@@ -144,75 +144,92 @@ nav .navContainer:hover .button:active {
 
 /* Footer */
 footer {
+  display: grid;
+  grid-template-columns: auto auto;
   width: 100%;
   bottom: 0;
   position: relative;
   color: white;
-  background-color: #255aa5;
-  background-image: linear-gradient(to bottom, #255aa5, #0f36e7);
+  background-color: rgb(37, 90, 165);
   height: fit-content;
   text-align: center;
   padding: 50px 0px;
   margin: 0px;
   margin-top: 60vh;
-  outline: double #0d4aff 3px;
-  box-shadow: 0px -5px 5px #0d4aff;
+  outline: dashed rgb(13, 74, 255) 2px;
 }
 
-footer table {
+
+footer div {
   margin: auto;
-  width: 50%;
+  width: 100%;
 }
-
-footer table th,
-td {
+footer div:nth-child(odd){
   border-right: 1px solid #ddd;
-  border-left: 1px solid #ddd;
 }
 
-footer table th {
-  border-bottom: 1px solid #ddd;
-  border-radius: 50%;
+footer div ul {
+  list-style-position: outside;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
 }
 
-footer th {
+
+footer h1 {
   font-size: 20px;
   text-align: center;
-
 }
 
-footer td p {
+footer div li {
   cursor: pointer;
   text-align: center;
   padding: 5px;
+}
+
+footer div li a {
   color: white;
   text-decoration: none;
 }
 
-footer td p:active {
+footer li:active {
   color: rgb(0, 191, 255)
 }
+
 
 /* Responsive Design */
 @media screen and (max-width: 600px) {
   nav {
     flex-direction: column;
     position: relative;
+
   }
 
-  nav a {
-    width: calc(100% - 40px);
-    margin: auto;
-    font-size: 20px;
+  footer {
+    grid-template-columns: auto;
   }
 
-  footer table th {
-    border-bottom: 1px solid #ddd;
+  footer div:nth-child(odd){
     border-right: none;
     border-left: none;
+    border-bottom: 1px solid #ddd;
   }
 
-  footer table {
-    width: 100%;
+  nav .navContainer {
+    width: calc(100% - 20px);
+    height: 40px;
+    margin: 0;
+    border-radius: 0;
   }
+
+  nav .navContainer .cover {
+    width: 100vw;
+  }
+
+  nav .navContainer .button {
+    left: 50%;
+  }
+
 }
