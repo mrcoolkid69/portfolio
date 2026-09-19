@@ -3,6 +3,11 @@ const body = document.body;
 const html = document.documentElement;
 const cards = document.querySelectorAll(".website-card").length;
 const screenHeight = window.screen.height;
+const screenWidth = window.innerWidth;
+let phone = false;
+if (screenWidth <= 600) {
+    phone = true;
+}
 const cardHeight = screenHeight * 0.8;
 const pageHeight = Math.max(
     body.scrollHeight,
@@ -17,22 +22,19 @@ function targetCardPxs(scroll) {
     let activeCard;
     for (let i = 1; i <= cards; i++) {
         if (i <= 6) {
-            if (scroll >= ((cardHeight * i) - screenHeight)) {
-                // console.log(scroll);
-                activeCard = i;
-            }
-        }else if(i > 6){
-            if (scroll >= ((cardHeight * i) - screenHeight)-300) {
-                // console.log(scroll);
-                activeCard = i;
-            }
-        }else{
-            if (scroll >= ((cardHeight * i) - screenHeight)-800) {
-                // console.log(scroll);
-                activeCard = i;
-            }
+            screenOffSet = 0;
+        }else if (i > 6) {
+            screenOffSet = 300;
+        } else {
+            screenOffSet = 800;
         }
-    }
+        if (phone === true) { 
+            screenOffSet -= 400;
+        }
+        if (scroll >= ((cardHeight * i) - screenHeight) - screenOffSet) {
+            activeCard = i;
+        }
+    } 
     console.log(activeCard);
     return activeCard;
 }
