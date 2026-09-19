@@ -11,6 +11,28 @@
     <script src="sites.js" defer></script>
 
     <style>
+        @keyframes hide {
+            0% {
+                opacity: 1;
+            }
+
+            99% {
+                opacity: 0;
+            }
+
+            100% {
+                display: none;
+                opacity: 0;
+
+            }
+
+        }
+
+        .tooltip {
+            display: none;
+
+        }
+
         .website-card {
             display: block;
             width: 60%;
@@ -55,6 +77,45 @@
             .website-card h6 {
                 line-height: 5px;
             }
+
+        }
+
+        @media screen and (max-width: 600px) {
+            .tooltip {
+                top: 200px;
+                display: block;
+                position: absolute;
+                right: 10px;
+            }
+
+            .tooltiptext {
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                position: absolute;
+                z-index: 1;
+                top: -5px;
+                right: 110%;
+                transition: 0.3s;
+                animation: hide 2s ease 2s;
+                animation-fill-mode: forwards;
+                /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            }
+
+            .tooltiptext::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 100%;
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent transparent transparent black;
+            }
+
         }
     </style>
 </head>
@@ -83,8 +144,13 @@
 
         </div>
     </nav>
+
     <main>
-        <img src ="logo.png" alt="Logo" class="logo">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="tooltip">
+            <span class="tooltiptext">You can use the side of your phone to scroll</span>
+        </div>
+
         <header>My Websites</header>
 
         <!-- Website Cards -->
