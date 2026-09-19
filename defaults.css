@@ -7,7 +7,15 @@ body {
   font-family: Arial, Helvetica, sans-serif, Times;
 
 }
-
+main{
+  margin-top: 100px;
+}
+ main *:not(.logo) {
+  
+  animation: fade-in 1s ease 0.1s;
+  animation-fill-mode:backwards;
+} 
+  
 .btn-link {
   display: block;
   text-align: center;
@@ -33,13 +41,19 @@ body {
   box-shadow: 0px 0px 0px #000000ce;
 }
 
+@keyframes fade-in {
+  0%{transform: translateY(20px);opacity: 0;}
+  100%{transform: translateY(0);opacity: 1;}
+}
+
 header {
   font-size: 50px;
   color: white;
   text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 5px #70bfff;
-  margin: 45px 0;
+  margin: 45px 0;  
+  
 }
 
 subheader {
@@ -56,9 +70,6 @@ a {
   text-decoration: none;
 }
 
-main {
-  margin-top: 100px;
-}
 
 .logo {
   width: 10vw;
