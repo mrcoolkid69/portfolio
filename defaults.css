@@ -1,3 +1,5 @@
+/* Main stuff */
+
 body {
 
   background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
@@ -7,6 +9,12 @@ body {
   font-family: Arial, Helvetica, sans-serif, Times;
 
 }
+
+/* Animation for fade in */
+@keyframes fade-in {
+  0%{transform: translateY(20px);opacity: 0;}
+  100%{transform: translateY(0);opacity: 1;}
+}
 main{
   margin-top: 100px;
 }
@@ -14,7 +22,35 @@ main{
   
   animation: fade-in 1s ease 0.1s;
   animation-fill-mode:backwards;
-} 
+}
+
+/* Text */
+
+header {
+  font-size: max(5vw,50px);  
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #70bfff;
+  margin: 45px 0;  
+  
+}
+
+subheader {
+  font-size: 25px;
+  display: block;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #70bfff;
+  margin: 25px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Defualt buttons and stuff */
   
 .btn-link {
   display: block;
@@ -41,36 +77,7 @@ main{
   box-shadow: 0px 0px 0px #000000ce;
 }
 
-@keyframes fade-in {
-  0%{transform: translateY(20px);opacity: 0;}
-  100%{transform: translateY(0);opacity: 1;}
-}
-
-header {
-  font-size: 50px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px #70bfff;
-  margin: 45px 0;  
-  
-}
-
-subheader {
-  font-size: 25px;
-  display: block;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px #70bfff;
-  margin: 25px 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-
+/* Logo at the top of the page */
 .logo {
   width: 10vw;
   position: absolute;
