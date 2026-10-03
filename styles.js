@@ -31,8 +31,8 @@ function loadfooter() {
                     </a>
                 </li>
                 <li>
-                    <a href = "https://mrcoolkid69.github.io/responsive/"target="_blank">
-                        <p>Responsive</p>
+                    <a href = "https://mrcoolkid69.github.io/tools/"target="_blank">
+                        <p>Tools</p>
                     </a>
                 </li>
             </ul>
