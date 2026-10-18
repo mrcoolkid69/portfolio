@@ -209,13 +209,15 @@ footer h1 {
 }
 
 footer div li {
-  cursor: pointer;
+  
   text-align: center;
   padding: 5px;
+
 }
 
 footer div li a {
   color: white;
+  cursor: pointer;
   text-decoration: none;
 }
 
