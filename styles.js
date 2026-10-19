@@ -1,4 +1,45 @@
 
+
+const defaultBtn = document.getElementById("default-theme");
+const darkBtn = document.getElementById("dark-theme");
+const lightBtn = document.getElementById("light-theme");
+const invertBtn = document.getElementById("inverted-theme");
+
+
+defaultBtn.addEventListener("click", () => {
+    changeStyle("default");
+});
+
+darkBtn.addEventListener("click", () => {
+    changeStyle("dark");
+});
+
+lightBtn.addEventListener("click", () => {
+    changeStyle("light");
+});
+
+invertBtn.addEventListener("click", () => {
+    changeStyle("inverted");
+});
+
+
+function changeStyle(theme) {
+    localStorage.setItem("theme", theme);
+    loadStyles();
+    console.log(theme);
+}
+
+function loadStyles() {
+    let style = localStorage.getItem("theme");
+    if (style === "defualt") {
+        document.documentElement.removeAttribute('data-theme');
+    } else {
+        document.documentElement.setAttribute('data-theme', style);
+    }
+}
+loadStyles();
+
+
 function loadfooter() {
     document.getElementsByTagName("footer")[0].innerHTML = `
     <div>

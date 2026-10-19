@@ -17,8 +17,9 @@
             padding: 20px;
             border: 1px solid black;
             border-radius: 10px;
-            background-color: #54c0ff;
-            background-image: linear-gradient(to bottom right, #54c0ff, #2f7ef3);
+            background-color: var(--default-box-background-color);
+            background-image: var(--default-box-background-gradient);
+            color: var(--defualt-box-text-color);
             transition: 0.3s;
         }
 
@@ -36,7 +37,7 @@
         .form-container input,
         .form-container textarea {
             width: 80%;
-            background-image: linear-gradient(to bottom right, #0059ff, #258dee);
+            background-image: var(--default-button-background-gradient);
             padding: 10px;
             border: 1px solid black;
             border-radius: 5px;
@@ -54,8 +55,8 @@
 
         .form-container button {
             padding: 5px 10px;
-            background-color: #0044fe;
-            color: white;
+            background-color: var(--default-button-background-color);
+            color: var(--default-button-text-color);
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -96,6 +97,27 @@
             </a>
             <div class="cover">Contact</div>
 
+        </div>
+         <div class="theme-box">
+            <div class="theme-name-box">
+                <div id="default-theme"></div>
+                <div class="theme-name">Default</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="dark-theme"></div>
+                <div class="theme-name">Dark</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="light-theme" ></div>
+                <div class="theme-name">Light</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="inverted-theme"></div>
+                <div class="theme-name">Inverted</div>
+            </div>
         </div>
     </nav>
     <main>
