@@ -91,6 +91,7 @@
  
 }
 
+
 .theme-name {
   visibility: hidden;
   width: 130px;
@@ -316,24 +317,43 @@ nav .theme-box {
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid black;
+  transition: 0.3s;
 }
+
+
+
+
 
 #default-theme {
   background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
+}
+#default-theme:hover {
+  transform: scale(1.2);
 }
 
 #dark-theme {
   background: linear-gradient(140deg, #1a1a1a 0%, #4d4d4d 51%, #808080 85%);
 }
 
+#dark-theme:hover {
+  transform: scale(1.2);
+}
+
 #light-theme {
   background: linear-gradient(140deg, #f0f0f0 0%, #d9d9d9 51%, #b3b3b3 85%);
+}
+
+#light-theme:hover {
+  transform: scale(1.2);
 }
 
 #inverted-theme {
   background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
   filter: invert(100%);
+}
 
+#inverted-theme:hover {
+  transform: scale(1.2);
 }
 
 /* Footer */
