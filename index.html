@@ -17,9 +17,10 @@
             margin: 0 auto;
             padding: 25px;
             border: 1px solid black;
+            color:var(--defualt-box-text-color);
             border-radius: 10px;
-            background-color: #54c0ff;
-            background-image: linear-gradient(to bottom right, #54c0ff, #2f7ef3);
+            background-color: var(--default-box-background-color);
+            background-image: var(--default-box-background-gradient);
             transition: 0.3s;
         }
 
@@ -56,6 +57,12 @@
                 <div class="button"></div>
             </a>
             <div class="cover">Contact</div>
+        </div>
+        <div class="theme-box">
+            <div id="default-theme"></div>
+            <div id="dark-theme"></div>
+            <div id="light-theme"></div>
+            <div id="inverted-theme"></div>
         </div>
 
     </nav>

@@ -1,45 +1,135 @@
 /* Main stuff */
 
-body {
+:root {
+  --background-color: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
+  --text-color: white;
 
-  background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
+  --defualt-box-text-color: black;
+  --default-box-background-color: #54c0ff;
+  --default-box-background-gradient: linear-gradient(to bottom right, #54c0ff, #2f7ef3);
+
+  --default-button-text-color: black;
+  --default-button-background-color: #54c0ff;
+  --default-button-background-gradient: linear-gradient(to top left, #54c0ff, #0e78f1);
+
+  --nav-hover-effect: 0px 10px 10px blue;
+  --nav-background-color: #006eff;
+  --nav-background-gradient: linear-gradient(to bottom right, #1575bf, #0046c7);
+  --nav-active-background-gradient: linear-gradient(to bottom right, #0067b6, #0046c7);
+  --nav-button-color: #006eff;
+  --nav-button-text-color: black;
+
+  --footer-background-color: #0d52b4;
+  --footer-background-gradient: linear-gradient(to bottom, #145bc7, #0d3dda);
+  --footer-active-color: #00bfff;
+  --footer-hover-effect: 0px 0px 25px blue;
+}
+
+[data-theme="dark"] {
+  --background-color: linear-gradient(140deg, black 0%, #1a1a1a 51%, #131313 85%);
+  --text-color: white;
+
+  --defualt-box-text-color: white;
+  --default-box-background-color: black;
+  --default-box-background-gradient: linear-gradient(to bottom right, #1a1a1a, #000000);
+
+  --default-button-text-color: white;
+  --default-button-background-color: #333;
+  --default-button-background-gradient: linear-gradient(to top left, #2d2d2d, #030303);
+
+  --nav-hover-effect: 0px 10px 10px black;
+  --nav-background-color: black;
+  --nav-background-gradient: linear-gradient(to bottom right, #000000, #1f1f1f);
+  --nav-active-background-gradient: linear-gradient(to bottom right, #333333, #100f0f);
+  --nav-button-color: #202020;
+  --nav-button-text-color: white;
+
+  --footer-background-color: #020202;
+  --footer-background-gradient: linear-gradient(to bottom, #0f0f0f, #1d1d1d);
+  --footer-active-color: #00bfff;
+  --footer-hover-effect: 0px 0px 25px black;
+}
+
+
+[data-theme="light"] {
+  --background-color: linear-gradient(140deg, white 0%, #b6b6b6 51%, #838383 85%);
+  --text-color: black;
+
+  --defualt-box-text-color: black;
+  --default-box-background-color: white;
+  --default-box-background-gradient: linear-gradient(to bottom right, #f0f0f0, #8f8e8e);
+
+  --default-button-text-color: black;
+  --default-button-background-color: #dadada;
+  --default-button-background-gradient: linear-gradient(to top left, #dedede, #969696);
+
+  --nav-hover-effect: 0px 10px 10px rgb(82, 82, 82);
+  --nav-background-color: rgb(237, 237, 237);
+  --nav-background-gradient: linear-gradient(to bottom right, white, #898989);
+  --nav-active-background-gradient: linear-gradient(to bottom right, #e6e6e6, #7a7a7a);
+  --nav-button-color: #c7c7c7;
+  --nav-button-text-color: black;
+
+  --footer-background-color: #b6b6b6;
+  --footer-background-gradient: linear-gradient(to bottom, #999999, #5e5e5e);
+  --footer-active-color: #00bfff;
+  --footer-hover-effect: 0px 0px 25px black;
+}
+
+[data-theme="inverted"] {
+  filter:invert();
+}
+ 
+[data-theme="inverted"] .theme-box { 
+  filter: invert();
+}
+
+body {
+  background: var(--background-color);
   text-align: center;
   margin: 0;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif, Times;
-
 }
 
 /* Animation for fade in */
 @keyframes fade-in {
-  0%{transform: translateY(20px);opacity: 0;}
-  100%{transform: translateY(0);opacity: 1;}
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
-main{
+
+main {
   margin-top: 100px;
 }
- main *:not(.logo) {
-  
+
+main *:not(.logo) {
   animation: fade-in 1s ease 0.1s;
-  animation-fill-mode:backwards;
+  animation-fill-mode: backwards;
 }
 
 /* Text */
 
 header {
-  font-size: max(5vw,50px);  
-  color: white;
+  font-size: max(5vw, 50px);
+  color: var(--text-color);
   text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 5px #70bfff;
-  margin: 45px 0;  
-  
+  margin: 45px 0;
+
 }
 
 subheader {
   font-size: 25px;
   display: block;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 5px #70bfff;
@@ -51,7 +141,7 @@ a {
 }
 
 /* Defualt buttons and stuff */
-  
+
 .btn-link {
   display: block;
   text-align: center;
@@ -59,9 +149,9 @@ a {
   padding: 15px;
   border: 1px solid black;
   border-radius: 18px;
-  background-color: #54c0ff;
-  background-image: linear-gradient(to top left, #54c0ff, #0e78f1);
-  color: black;
+  background-color: var(--default-button-background-color);
+  background-image: var(--default-button-background-gradient);
+  color: var(--default-button-text-color);
   text-decoration: none;
   width: fit-content;
   height: auto;
@@ -92,13 +182,12 @@ a {
 
 /* Navigation Bar */
 nav {
-  background-color: #1575bf;
-  background-image: linear-gradient(to bottom right, #1575bf, #0046c7);
+  background-color: var(--nav-background-color);
+  background-image: var(--nav-background-gradient);
   overflow: hidden;
   display: flex;
   width: 100%;
-  filter: drop-shadow(0px 10px 10px black);
-  box-shadow: 0px 0px 8px blue;
+  box-shadow: var(--nav-hover-effect);
   border-radius: 6px;
   z-index: 7777;
   position: sticky;
@@ -119,7 +208,7 @@ nav .navContainer .cover {
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: var(--nav-button-text-color);
   width: 70px;
   height: 40px;
   position: absolute;
@@ -128,7 +217,7 @@ nav .navContainer .cover {
   left: 0;
   transform-origin: top center;
   transition: 0.4s;
-  background-color: #006eff;
+  background-color: var(--nav-button-color);
   border-radius: 10px;
   font-family: 'Times New Roman', Times, serif;
 }
@@ -139,9 +228,9 @@ nav .navContainer:hover .cover:not(.active) {
 }
 
 nav .navContainer#active .cover {
-  background-color: #0067b6;
-  color: white;
-  background-image: linear-gradient(to bottom right, #0067b6, #0046c7);
+  background-color: var(--nav-button-color);
+  color: var(--nav-button-text-color);
+  background-image: var(--nav-active-background-gradient);
 
 }
 
@@ -172,6 +261,44 @@ nav .navContainer:hover .button:active {
   box-shadow: 0px 0px 0px black;
 }
 
+nav .theme-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+#default-theme,
+#dark-theme,
+#light-theme,
+#inverted-theme {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+#default-theme {
+  background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
+}
+
+#dark-theme {
+  background: linear-gradient(140deg, #1a1a1a 0%, #4d4d4d 51%, #808080 85%);
+}
+
+#light-theme {
+  background: linear-gradient(140deg, #f0f0f0 0%, #d9d9d9 51%, #b3b3b3 85%);
+}
+
+#inverted-theme {
+  background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
+  filter: invert(100%);
+
+}
+
 /* Footer */
 footer {
   display: grid;
@@ -179,15 +306,15 @@ footer {
   width: 100%;
   bottom: 0;
   position: relative;
-  color: white;
-  background-color: #0d52b4;
-  background-image: linear-gradient(to bottom, #145bc7, #0d3dda);
+  color: var(--text-color);
+  background-color: var(--footer-background-color);
+  background-image: var(--footer-background-gradient);
   height: fit-content;
   text-align: center;
   padding: 50px 0px;
   margin: 0px;
   margin-top: 60vh;
-  box-shadow: 0px 0px 25px blue;
+  box-shadow: var(--footer-hover-effect);
 }
 
 
@@ -216,20 +343,20 @@ footer h1 {
 }
 
 footer div li {
-  
+
   text-align: center;
   padding: 5px;
 
 }
 
 footer div li a {
-  color: white;
+  color: var(--text-color);
   cursor: pointer;
   text-decoration: none;
 }
 
 footer li a:active {
-  color: rgb(0, 191, 255)
+  color: var(--footer-active-color);
 }
 
 
