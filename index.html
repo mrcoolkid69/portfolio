@@ -17,7 +17,7 @@
             margin: 0 auto;
             padding: 25px;
             border: 1px solid black;
-            color:var(--defualt-box-text-color);
+            color: var(--default-box-text-color);
             border-radius: 10px;
             background-color: var(--default-box-background-color);
             background-image: var(--default-box-background-gradient);
@@ -27,7 +27,6 @@
         .about-me:hover {
             box-shadow: 0px 4px 8px #000000ce;
         }
-        
     </style>
 </head>
 
@@ -38,7 +37,7 @@
         <a href ="contact.html">Contact</a> -->
 
         <div class="navContainer" id="active">
-            
+
             <a href="index.html">
                 <div class="button"></div>
             </a>
@@ -59,16 +58,31 @@
             <div class="cover">Contact</div>
         </div>
         <div class="theme-box">
-            <div id="default-theme"></div>
-            <div id="dark-theme"></div>
-            <div id="light-theme"></div>
-            <div id="inverted-theme"></div>
+            <div class="theme-name-box">
+                <div id="default-theme"></div>
+                <div class="theme-name">Default</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="dark-theme"></div>
+                <div class="theme-name">Dark</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="light-theme"></div>
+                <div class="theme-name">Light</div>
+            </div>
+
+            <div class="theme-name-box">
+                <div id="inverted-theme"></div>
+                <div class="theme-name">Inverted</div>
+            </div>
         </div>
 
     </nav>
-    
-    <main> 
-        <img src ="logo.png" alt="Logo" class="logo">
+
+    <main>
+        <img src="logo.png" alt="Logo" class="logo">
         <header>Ethan Figueroa's Portfolio</header>
         <div class="about-me">
             <p>Welcome to my portfolio. Here you can find information about me, my projects, and how to get in touch.
@@ -84,5 +98,5 @@
     </main>
     <footer></footer>
 </body>
- 
+
 </html>

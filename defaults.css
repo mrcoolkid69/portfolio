@@ -4,7 +4,7 @@
   --background-color: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
   --text-color: white;
 
-  --defualt-box-text-color: black;
+  --default-box-text-color: black;
   --default-box-background-color: #54c0ff;
   --default-box-background-gradient: linear-gradient(to bottom right, #54c0ff, #2f7ef3);
 
@@ -29,7 +29,7 @@
   --background-color: linear-gradient(140deg, black 0%, #1a1a1a 51%, #131313 85%);
   --text-color: white;
 
-  --defualt-box-text-color: white;
+  --default-box-text-color: white;
   --default-box-background-color: black;
   --default-box-background-gradient: linear-gradient(to bottom right, #1a1a1a, #000000);
 
@@ -83,6 +83,43 @@
 [data-theme="inverted"] .theme-box { 
   filter: invert();
 }
+
+.theme-name-box {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+ 
+}
+
+.theme-name {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -3.5px;   
+  right: 125%;
+}
+
+.theme-name::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.theme-name-box div:hover + .theme-name {
+  visibility: visible;
+}
+
 
 body {
   background: var(--background-color);
