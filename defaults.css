@@ -77,10 +77,10 @@
 }
 
 [data-theme="inverted"] {
-  filter:invert();
+  filter: invert();
 }
- 
-[data-theme="inverted"] .theme-box { 
+
+[data-theme="inverted"] .theme-box {
   filter: invert();
 }
 
@@ -88,7 +88,7 @@
   position: relative;
   display: inline-block;
   cursor: pointer;
- 
+
 }
 
 
@@ -102,7 +102,7 @@
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  top: -3.5px;   
+  top: -3.5px;
   right: 125%;
 }
 
@@ -110,15 +110,20 @@
   content: " ";
   position: absolute;
   top: 50%;
-  left: 100%; /* To the right of the tooltip */
+  left: 100%;
+  /* To the right of the tooltip */
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent transparent black;
 }
 
-.theme-name-box div:hover + .theme-name {
-  visibility: visible;
+@media screen and (min-width: 600px) {
+
+
+  .theme-name-box div:hover+.theme-name {
+    visibility: visible;
+  }
 }
 
 
@@ -327,6 +332,7 @@ nav .theme-box {
 #default-theme {
   background: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
 }
+
 #default-theme:hover {
   transform: scale(1.2);
 }
@@ -464,6 +470,23 @@ footer li a:active {
     left: 0;
     margin: 0 auto;
     width: 25vw;
+  }
+
+  .theme-box {
+    display: flex;
+    flex-direction: row;
+    margin: 5px auto !important;
+
+  }
+
+  #default-theme,
+  #dark-theme,
+  #light-theme,
+  #inverted-theme {
+    width: 25px;  
+    height: 25px;
+    margin: 0 5px;
+
   }
 
 }
