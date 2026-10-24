@@ -64,7 +64,7 @@ function loadfooter() {
 
         </div>
         <div>
-            <h1>Projects</h1>
+            <h1>Latest Projects</h1>
             <ul>
                 <li>
                     <a href = "https://ethaniscool.w3spaces.com"target="_blank">
