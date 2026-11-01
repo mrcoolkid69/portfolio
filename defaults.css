@@ -52,16 +52,16 @@
 
 
 [data-theme="light"] {
-  --background-color: linear-gradient(140deg, white 0%, #b6b6b6 51%, #838383 85%);
+  --background-color: linear-gradient(140deg, white 0%, #dbdbdb 51%, #bbbbbb 85%);
   --text-color: black;
 
   --defualt-box-text-color: black;
   --default-box-background-color: white;
-  --default-box-background-gradient: linear-gradient(to bottom right, #f0f0f0, #8f8e8e);
+  --default-box-background-gradient: linear-gradient(to bottom right, #f0f0f0, #d6d6d6);
 
   --default-button-text-color: black;
   --default-button-background-color: #dadada;
-  --default-button-background-gradient: linear-gradient(to top left, #dedede, #969696);
+  --default-button-background-gradient: linear-gradient(to top left, #dedede, #c5c5c5);
 
   --nav-hover-effect: 0px 10px 10px rgb(82, 82, 82);
   --nav-background-color: rgb(237, 237, 237);
@@ -71,7 +71,7 @@
   --nav-button-text-color: black;
 
   --footer-background-color: #b6b6b6;
-  --footer-background-gradient: linear-gradient(to bottom, #999999, #5e5e5e);
+  --footer-background-gradient: linear-gradient(to bottom, #f1f1f1, #a5a5a5);
   --footer-active-color: #00bfff;
   --footer-hover-effect: 0px 0px 25px black;
 }
