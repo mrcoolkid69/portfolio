@@ -3,6 +3,7 @@
 :root {
   --background-color: linear-gradient(140deg, #0e12f1 0%, #1f80db 51%, #2cb3e8 85%);
   --text-color: white;
+  --text-color-effect: 2px 2px 5px #70bfff;
 
   --default-box-text-color: black;
   --default-box-background-color: #54c0ff;
@@ -28,6 +29,7 @@
 [data-theme="dark"] {
   --background-color: linear-gradient(140deg, black 0%, #1a1a1a 51%, #131313 85%);
   --text-color: white;
+  --text-color-effect: 2px 2px 5px #70bfff;
 
   --default-box-text-color: white;
   --default-box-background-color: black;
@@ -54,6 +56,7 @@
 [data-theme="light"] {
   --background-color: linear-gradient(140deg, white 0%, #dbdbdb 51%, #bbbbbb 85%);
   --text-color: black;
+  --text-color-effect: 2px 2px 5px #4b4b4b;
 
   --defualt-box-text-color: black;
   --default-box-background-color: white;
@@ -164,7 +167,7 @@ header {
   color: var(--text-color);
   text-align: center;
   font-weight: bold;
-  text-shadow: 2px 2px 5px #70bfff;
+  text-shadow: var(--text-color-effect);
   margin: 45px 0;
 
 }
@@ -175,7 +178,7 @@ subheader {
   color: var(--text-color);
   text-align: center;
   font-weight: bold;
-  text-shadow: 2px 2px 5px #70bfff;
+  text-shadow: var(--text-color-effect);
   margin: 25px 0;
 }
 
